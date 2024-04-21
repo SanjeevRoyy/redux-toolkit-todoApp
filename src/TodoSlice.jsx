@@ -1,5 +1,5 @@
-
 import { createSlice } from '@reduxjs/toolkit'
+
 const initialState = {
     todos: [],
   };
@@ -14,7 +14,14 @@ const initialState = {
       removeTodo: (state, action) => {
         state.todos = state.todos.filter(todo => todo.id !== action.payload);
       },
+      editTodo: (state, action) => {
+        const { id, text } = action.payload;
+        const todoToEdit = state.todos.find(todo => todo.id === id);
+        if (todoToEdit) {
+          todoToEdit.text = text;
+        }
+    }
     },
   });
-  export const  {addTodo,removeTodo} = TodoSlice.actions
+  export const  {addTodo,removeTodo,editTodo} = TodoSlice.actions
   export default TodoSlice.reducer
