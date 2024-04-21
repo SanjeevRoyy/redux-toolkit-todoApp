@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addTodo } from './Store';
+import { addTodo } from './TodoSlice';
 import './styles.css'; // Import CSS here
 
 const AddTodoForm = () => {

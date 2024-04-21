@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeTodo } from './Store';
+import { removeTodo } from './TodoSlice';
 import './styles.css'; // Import CSS here
 
 const TodoList = () => {
