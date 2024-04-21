@@ -8,7 +8,7 @@ import './styles.css'
 const App = () => {
   return (
     <Provider store={store}>
-      <div>
+      <div className='mainDiv'>
         <h1>Todo App</h1>
         <AddTodoForm />
         <TodoList />
